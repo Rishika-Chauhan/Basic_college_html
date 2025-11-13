@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        body
+        {
+            margin:0;
+            padding:0;
+        }
+        html
+        {
+            margin:0px;
+        }
+
+        #main{
+            height:300px;
+            width:900px;
+            background-color: blue;
+            display: flex;
+        }
+
+         #left{
+            height:300px;
+            width:300px;
+            background-color:aqua;
+            
+        }
+        #right{
+            height:300px;
+            width:580px;
+            background-color:black;
+            margin-left:20px;
+        }
+        .rgt_box{
+            width: 580px;
+            height: 140px;
+            background-color: beige;
+        }
+
+        .rgt_box:nth-child(2){
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+   <div id="main">
+    <div id="left"></div>
+
+    <div id="right">
+        <div class="rgt_box"></div>
+        <div class="rgt_box"></div>
+    </div>
+   </div>
+</body>
+</html>
