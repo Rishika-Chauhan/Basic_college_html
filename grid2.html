@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 2</title>
+
+    <style>
+       html
+       {
+        margin:0;
+        padding:0;
+         box-sizing:border-box;
+       }
+
+       main{
+        width: 1200px;
+        height: auto;
+        background-color: rgb(10, 50, 46);
+        margin: 0 auto;
+        display: grid;
+        grid-template-rows: 200px 300px 400px auto;
+        /* grid-template-columns: repeat(4, 1fr); */
+        gap: 20px;
+       }
+
+        .box:nth-child(odd)
+        {
+          background-color: lightblue;
+          /* height: 300px; */
+         
+        }
+        .box:nth-child(even)
+        {
+          background-color: beige;
+          /* height: 300px; */
+          
+        }
+        .box_left, .box_right{
+          background-color: coral;
+        }
+
+        #lft_rgt{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap:20px
+        }
+
+        @media screen and (min-width: 375px) and (max-width: 768px) {
+          main {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            background-color: lightseagreen;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          main {
+            display: grid;
+            width: 90%;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+
+          }
+        }
+        p{
+            /* font-size: 5vh; */
+            font-size: 2em
+        }
+
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hi ABES</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum blanditiis ea provident! Perferendis quae consequatur officia adipisci earum maxime, placeat, at nulla ipsum unde cupiditate labore incidunt! Ipsum hic iste modi reprehenderit odio vitae eius, exercitationem sunt officiis magnam quam ullam quae saepe blanditiis quasi sequi aliquam nam dignissimos a atque at illo laborum. Soluta maxime aliquid excepturi assumenda, optio at porro explicabo totam doloremque illo beatae dignissimos possimus ullam tenetur ad quam libero asperiores exercitationem dolorem? Vel sunt consectetur quisquam doloremque accusamus sint mollitia, nihil ea, reiciendis corrupti excepturi adipisci eum sit ab quia neque veniam, fugiat ipsa! Saepe.</p>
+    <main>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box" id="lft_rgt">3
+            <div class="box_left"></div>
+            <div class="box_right"></div>
+        </div>
+        <div class="box">4</div>
+    </main>
+ 
+</body>
+</html>
